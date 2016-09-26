@@ -47,3 +47,6 @@ db["Sergio"] = doc
 
 # Borro
 del db["Franco"]
+
+# CouchDB me guarda "revisiones" de todos los documentos no borrados
+print([i for i in db.revisions("Sergio")])
