@@ -3,7 +3,7 @@ apt-get update -y && apt-get upgrade -y
 apt-get install -y vim zsh tmux
 
 # Databases
-apt-get install -y mariadb-server redis-server memcached postgresql libpq-dev libmysqlclient-dev
+apt-get install -y mariadb-server redis-server memcached postgresql sqlite3 libpq-dev libmysqlclient-dev
 
 # Postgres
 # Postgres
