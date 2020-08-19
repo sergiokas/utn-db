@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
 	# PG
 	config.vm.network "forwarded_port", guest: 5432, host: 35432
 	# CouchDB UI
-	config.vm.network "forwarded_port", guest: 5984, host: 5984
+	config.vm.network "forwarded_port", guest: 5984, host: 35984
 
 
 	config.vm.provision "shell", path: "provision.sh"
