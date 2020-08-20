@@ -5,7 +5,12 @@ apt-get install -y vim zsh tmux
 # Databases
 apt-get install -y mariadb-server redis-server memcached postgresql sqlite3 libpq-dev libmysqlclient-dev
 
-# Postgres
+# Mysql
+sed -i 's/127.0.0.1/0.0.0.0/' /etc/mysql/mariadb.conf.d/50-server.cnf
+echo "CREATE USER 'admin'@'%' IDENTIFIED BY 'admin';" | mysql
+echo "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';" | mysql
+service mariadb restart
+
 # Postgres
 sed -i 's/peer/trust/' /etc/postgresql/10/main/pg_hba.conf
 service postgresql restart
