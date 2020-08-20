@@ -8,7 +8,7 @@ apt-get install -y mariadb-server redis-server memcached postgresql sqlite3 libp
 # Mysql
 sed -i 's/127.0.0.1/0.0.0.0/' /etc/mysql/mariadb.conf.d/50-server.cnf
 echo "CREATE USER 'admin'@'%' IDENTIFIED BY 'admin';" | mysql
-echo "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';" | mysql
+echo "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%';" | mysql
 service mariadb restart
 
 # Postgres
