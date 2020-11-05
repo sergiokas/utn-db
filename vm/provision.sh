@@ -3,7 +3,7 @@ apt-get update -y && apt-get upgrade -y
 apt-get install -y vim zsh tmux
 
 # Databases
-apt-get install -y mariadb-server redis-server memcached postgresql sqlite3 libpq-dev libmysqlclient-dev
+apt-get install -y mariadb-server redis-server memcached postgresql sqlite3 libpq-dev libmysqlclient-dev python3-dev python3-venv
 
 # Mysql
 sed -i 's/127.0.0.1/0.0.0.0/' /etc/mysql/mariadb.conf.d/50-server.cnf
